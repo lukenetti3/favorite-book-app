@@ -1,0 +1,25 @@
+<% include ./partials/header.ejs %>
+
+<div class="ui text container main center aligned">
+    <h1 class="title center aligned">List of Favorite Books</h1>
+    <div class="ui two column grid">
+        <% for(var i = 0; i<books.total; i++) { %>
+            <div class="column">
+                <div class="ui segment">
+                    <h4 id="title"><%= books.objects[i].title %></h4>
+                    <svg width="150" height="230">
+                        <image xlink:href="<%= books.objects[i].metadata.image.imgix_url %>" x="0" y="0" width="100%" height="100%"></image>
+                    </svg>
+                    <% if(typeof books.objects[i].metadata.comments !== "undefined" && books.objects[i].metadata.comments.length > 75) { %>
+                    <p id="comments"><%- books.objects[i].metadata.comments.substring(0,75) %>...</p>
+                    <% } else { %>
+                    <p><%- books.objects[i].metadata.comments %></p>
+                    <% } %>
+                    <a href="/books/<%= books.objects[i].slug %>" class="ui inverted blue button left aligned">More Info</a>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<% include ./partials/footer.ejs %>

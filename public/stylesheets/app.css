@@ -1,0 +1,40 @@
+body {
+    background: #076585;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container.main {
+    margin-top: 2em;
+}
+
+.ui.segment {
+    background-color: #edf3f4;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #ffffff;
+}
+
+.fa-arrow-circle-left {
+    margin-right: 1em;
+    color: white;
+}
+
+#title {
+    font-family: 'Raleway', sans-serif;
+}
+
+#comments {
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 1em;
+}
+
+#buy {
+    margin-right: 0;
+    margin-left: 0.2em;
+}
+

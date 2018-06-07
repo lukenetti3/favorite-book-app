@@ -1,0 +1,18 @@
+{
+  "name": "cosmicjs_bookapp",
+  "version": "1.0.0",
+  "description": "Book App for Cosmic JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luke Netti",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cosmicjs": "^3.2.8",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "method-override": "^2.3.10"
+  }
+}

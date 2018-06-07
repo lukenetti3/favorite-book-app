@@ -1,0 +1,23 @@
+<% include ./partials/header.ejs %>
+
+<div class="ui text container main center aligned">
+  <h2 class="title"><a href="/" ><i class="fas fa-arrow-circle-left fa-sm"></i></a><%= book.object.title %></h2>
+    <div class="ui two column grid">
+
+      <div class="column">
+        <div class="ui segment center aligned">
+            <img class="ui medium bordered centered image" src="<%= book.object.metadata.image.imgix_url %>">
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment center aligned">
+            <h4>Description</h4>
+            <p id="comments"><%- book.object.metadata.comments %></p>
+            <a href="<%= book.object.metadata.website%>" target="_blank" class="ui inverted orange button">
+                Buy<i class="amazon icon big" id="buy"></i></a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<% include ./partials/footer.ejs %>
