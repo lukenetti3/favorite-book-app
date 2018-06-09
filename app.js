@@ -1,5 +1,4 @@
-var methodOverride = require("method-override"),
-    bodyParser  = require("body-parser"),
+var bodyParser  = require("body-parser"),
     express     = require("express"),
     app         = express(),
     Cosmic      = require("cosmicjs");
@@ -13,16 +12,11 @@ var bucket = api.bucket({
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(methodOverride("_method"));
-
 
 app.get("/", function(req,res){
     res.redirect("/books");
 });
 
-// RESTful ROUTES
-
-// INDEX ROUTE
 app.get("/books", function(req,res){
     bucket.getObjects({
     }).then(books => {
@@ -30,7 +24,6 @@ app.get("/books", function(req,res){
     });
 });
 
-// SHOW ROUTE
 app.get("/books/:slug", function(req,res){
     bucket.getObject({
         slug: req.params.slug
